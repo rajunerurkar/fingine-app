@@ -1,0 +1,170 @@
+<header class="header-area">
+    <div class="top-header-area">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 d-flex justify-content-between">
+            <div class="logo">
+              <a routerLink="/">
+                <img src="./img/Logo-03.jpg" width="200" height="200" alt="Fingine Logo" />
+              </a>
+            </div>
+  
+            <div class="top-contact-info d-flex align-items-center">
+              <a href="#">
+                <img src="./img/core-img/location11.png" alt="" width="26" height="26" />
+                <span>
+                  Fingine Financial Service LLP:<br />
+                  216, Swastik Plaza, 2nd floor, Pokhran Road no 2, Near Voltas, Subhash Nagar, Thane (W) 400601
+                </span>
+              </a>
+            </div>
+  
+            <div class="top-contact-info d-flex align-items-center">
+              <a href="mailto:support@fingine.in">
+                <img src="./img/core-img/mail.png" alt="" width="22" height="26" />
+                <span>{{ 'support@fingine.in' }}</span>
+              </a>
+            </div>
+  
+            <div class="top-contact-info d-flex align-items-center">
+              <a href="https://www.facebook.com/finginefinancialplanners" target="_blank">
+                <img src="./img/core-img/facabook.png" alt="Facebook" width="26" height="26" />
+              </a>
+            </div>
+  
+            <div class="top-contact-info d-flex align-items-center">
+              <a href="https://play.google.com/store/apps/details?id=com.fingine.app" target="_blank">
+                <img src="./img/core-img/insta.png" alt="Instagram" width="26" height="26" />
+              </a>
+            </div>
+  
+            <div class="top-contact-info d-flex align-items-center">
+              <a href="https://api.whatsapp.com/send?phone=918975758197" target="_blank">
+                <img src="./img/core-img/whatsapp.png" alt="WhatsApp" width="26" height="26" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+    <!-- <div class="credit-main-menu" id="sticker">
+      <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+              <nav class="classy-navbar justify-content-between" id="creditNav">
+
+                  <div class="classy-navbar-toggler">
+                      <span class="navbarToggler"><span></span><span></span><span></span></span>
+                  </div>
+
+                  <div class="classy-menu">
+
+                      <div class="classycloseIcon">
+                          <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                      </div>
+
+                      <div class="classynav">
+                          <ul>
+                              <li><a href="/">Home</a></li>
+                              <li>
+                                  <a href="#">Services</a>
+                                  <ul class="dropdown" style="width: 250px">
+                                      <li><a href="/Services/Mutualfund">Mutual Funds</a></li>
+                                      <li><a href="/Services/PortfolioManagementServices">Portfolio Management</a></li>
+                                      <li><a href="/Services/LifeInsurance">Insurance</a></li>
+                                      <li><a href="/Services/HomeLoans">Home Loans</a></li>
+                                      <li><a href="/Services/FixedDeposits">Fixed Deposits</a></li>
+                                      <li><a href="/Services/Structured_Products">Structured Products</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="#">learning</a>
+                                  <ul class="dropdown" style="width: 250px">
+                                      <li><a href="/Home/ContactUs">Blogs</a></li>  
+                                      <li><a href="/Home/ContactUs">Videos</a></li>
+                                       <li><a href="/Learning/Mutual_Fund_Glossary">Mutual Fund Glossary</a></li>
+                                      <li><a href="/Learning/InsuranceGlossary">Insurance Glossary</a></li>
+                                  </ul>
+                              </li>
+
+                              <li><a href="/Home/Faqs">FAQs</a></li>
+                              <li><a href="/Home/about">About Us</a></li>
+                              <li><a href="/Home/ContactUs">Contact</a></li>
+                              <li><a href="https://mf.fingine.in/finginelogin.jsp" target="_blank">Login</a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+                  <div class="contact">
+                      <a href="#">
+                          <img src="./img/core-img/call2.png" alt="">
+                          022 47515673
+                      </a>
+                  </div>
+              </nav>
+          </div>
+      </div>
+</div>    -->
+
+  
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+ 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" routerLink="/services/mutual-fund" (click)="navigateToMutualFund()" routerLinkActive="active">Mutual Fund</a> </li>
+            <li><a class="dropdown-item" (click)="navigateTo('/services/pms')">Portfolio Management</a></li>
+            <li><a class="dropdown-item" (click)="navigateTo('/services/insurance')">Insurance</a></li>
+            <li><a class="dropdown-item" (click)="navigateTo('/services/home-loans')">Home Loans</a></li>
+            <li><a class="dropdown-item" (click)="navigateTo('/services/fixed-deposits')">Fixed Deposits</a></li>
+            <li><a class="dropdown-item" (click)="navigateTo('/services/structured-products')">Structured Products</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="learningDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Learning
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="learningDropdown">
+            <li><a class="dropdown-item" (click)="navigateTo('/contact')">Blogs</a></li>
+            <li><a class="dropdown-item" (click)="navigateTo('/contact')">Videos</a></li>
+            <li><a class="dropdown-item" (click)="navigateTo('/learning/mutual-fund-glossary')">Mutual Fund Glossary</a></li>
+            <li><a class="dropdown-item" (click)="navigateTo('/learning/insurance-glossary')">Insurance Glossary</a></li>
+        
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateTo('/faq')">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateTo('/about')">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateTo('/contact')">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://mf.fingine.in/finginelogin.jsp" target="_blank">Login</a>
+        </li>
+      </ul>
+    </div>
+    <div class="d-none d-lg-block contact">
+      <a href="#" class="phone-container" > <img src="./img/core-img/call2.png" alt="">&nbsp;&nbsp;<strong>022 47515673</strong></a>
+    </div>
+  </div>
+</nav>

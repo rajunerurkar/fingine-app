@@ -1,0 +1,53 @@
+<section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(../img/bg-img/13.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>FAQ</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="credit-faq-area mt-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center mb-50 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="line"></div>
+                    <h2>FAQs</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="accordions mb-0" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <div class="panel single-accordion" *ngFor="let faq of faqs; let i = index">
+                        <h6>
+                            <a role="button" [class.collapsed]="activeIndex !== i"
+                                    (click)="toggleAccordion(i)"
+                                    aria-expanded="activeIndex === i" aria-controls="collapseeleven" data-parent="#accordion" data-toggle="collapse">
+                                {{faq.question}} 
+                                <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        </a>
+                        </h6>
+                        <div [class.show]="activeIndex === i" 
+                             class="accordion-content collapse show">
+                            <p>{{faq.answer}}</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,317 @@
+ /* Hero Area */
+.hero-area {
+  position: relative;
+  overflow: hidden;
+  height: 500px; /* Set maximum height for the slider */
+  background-color: transparent !important; /* Ensure no white background */
+}
+
+/* Carousel Container */
+#heroCarousel {
+  height: 100% !important; /* Ensure the carousel takes full height of the hero area */
+  background-color: transparent !important; /* Ensure no white background */
+}
+
+/* Carousel Inner */
+.carousel-inner {
+  height: 100% !important; /* Ensure the inner container takes full height */
+  background-color: transparent !important; /* Ensure no white background */
+}
+
+/* Carousel Item */
+.carousel-item {
+  height: 100% !important; /* Ensure the item takes full height */
+  background-color: transparent !important; /* Ensure no white background */
+}
+
+/* Slide Background Image */
+.slide-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important; /* Force height */
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Ensure the image is above other elements */
+  background-color: transparent !important; /* Ensure no white background */
+}
+
+/* Overlay */
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  height: 100%; /* Ensure overlay covers the full height */
+}
+
+/* Welcome Text */
+.welcome-text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center text both vertically and horizontally */
+  text-align: center;
+  z-index: 2; /* Ensure text is above the image */
+}
+
+.welcome-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.welcome-text h6 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  bottom: 20px;
+  z-index: 3; /* Ensure indicators are above the image */
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc; /* Inactive dot color */
+  border: none;
+  margin: 0 5px;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff; /* Active dot color */
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 1;
+  z-index: 3; /* Ensure controls are above the image */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #007bff; /* Blue color for arrows */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  color: white; /* White arrow icons */
+}
+
+/* Fade-in-down animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    visibility: hidden; /* Initially hidden */
+    transform: translateY(-20px); /* Start 20px above */
+  }
+  to {
+    opacity: 1;
+    visibility: visible; /* Becomes visible */
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+.fadeInDown {
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Initially hidden */
+  animation: fadeInDown 1s ease-out forwards; /* Apply the animation and stay visible */
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    visibility: hidden; /* Initially hidden */
+    transform: translateY(20px); /* Start 20px below */
+  }
+  to {
+    opacity: 1;
+    visibility: visible; /* Becomes visible */
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+.fadeInUp {
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards; /* Apply the animation and stay visible */
+}
+
+.title1Css {
+  color: white;
+  font-weight: bolder;
+  font-size:60px;
+  opacity: 0;
+  visibility: hidden;
+  animation-delay: 0.3s;
+}
+.title2Css {
+  color:  #fdbb2d;
+  font-weight: bolder;
+  font-size:60px;
+  opacity: 0;
+  visibility: hidden;
+  animation-delay: 0.3s;
+}
+.subtitle1css {
+  color: white;
+  font-weight:400;
+  font-size:18px;
+  opacity: 0;
+  visibility: hidden;
+  animation-delay: 0.3s;
+}
+.subtitle2css {
+  color: white;
+  font-weight:400;
+  font-size:18px;
+  opacity: 0;
+  visibility: hidden;
+  animation-delay: 0.3s;
+}
+.subtitle3css {
+  color: white;
+  font-weight:400;
+  font-size:18px;
+  opacity: 0;
+  visibility: hidden;
+  animation-delay: 0.3s;
+}
+
+
+/* Container for the feature */
+.single-features-area {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image styling */
+.single-features-area img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover text styling */
+.single-features-area .hover-text {
+  position: absolute;
+  top: 50%; /* Start from the middle of the box */
+  left: 0;
+  width: 80%; /* Full width */
+  height: 60%; /* Half height of the box */
+  background: #fdbb2d; /* Yellow background */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/* Show text on hover */
+.single-features-area:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Optional: Add a zoom effect on hover */
+.single-features-area:hover img {
+  transform: scale(1.1);
+}
+
+
+/* About Us Section */
+.cta-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+/* Background Image */
+.cta-thumbnail {
+  flex: 1 1 50%; /* Take up 50% of the width */
+  min-height: 400px; /* Set a minimum height */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Content */
+.contentaboutus {
+  flex: 1 1 50%; /* Take up 50% of the width */
+  padding: 40px;
+  background-color: #fdbb2d;  /* White background for content */
+}
+
+/* Section Heading */
+.section-heading.white {
+  color: #333; /* Dark text color */
+}
+
+.section-heading .line {
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #ffbb38;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Text Content */
+.new1 {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555; /* Dark gray text color */
+}
+
+.line1 {
+  width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #ffbb38;
+    margin-bottom: 20px;
+}
+
+
+/* Custom tooltip styling */
+.tooltip-inner {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding */
+  font-size: 0.9rem; /* Font size */
+  max-width: 300px; /* Maximum width */
+}
+
+.tooltip.bs-tooltip-right .tooltip-arrow::before {
+  border-right-color: #333; /* Arrow color */
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}

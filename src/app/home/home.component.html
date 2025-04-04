@@ -1,0 +1,442 @@
+
+<div class="hero-area">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel Indicators (Dots) -->
+      <div class="carousel-indicators">
+        <button
+          *ngFor="let slide of slides; let i = index"
+          type="button"
+          data-bs-target="#heroCarousel"
+          [attr.data-bs-slide-to]="i"
+          [class.active]="i === 0"
+          [attr.aria-label]="'Slide ' + (i + 1)"
+        ></button>
+      </div>
+  
+      <!-- Carousel Slides -->
+      <div class="carousel-inner">
+        <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === 0">
+          <div class="slide-bg-img bg-img bg-overlay"
+            [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }">
+      
+        </div>
+         <div class="container h-100"> 
+            <div class="row h-100 align-items-center justify-content-center">
+              <div class="col-12 col-lg-9">
+                <div class="welcome-text text-center">
+                        <div [ngClass]="[slide.fadeinupdown, slide.titleCSS]"  *ngIf="slide.title">{{ slide.title }}</div>
+                        <div>
+                        <span [ngClass]="[slide.fadeinupdown, slide.subtitle1css]" *ngIf="slide.subtitle1"> {{ slide.subtitle1 }}</span>
+                        <span [ngClass]="[slide.fadeinupdown, slide.subtitle2css]" *ngIf="slide.subtitle2"> {{ slide.subtitle2 }}</span>
+                        <span [ngClass]="[slide.fadeinupdown, slide.subtitle3css]" *ngIf="slide.subtitle3"> {{ slide.subtitle3 }}</span>
+                        </div>
+                        <h6 *ngIf="slide.link" [ngClass]="[slide.fadeinupdown]" style="opacity: 0; visibility: hidden; animation-delay: 0.3s;">
+                            <a [href]="slide.link" style="color: white" target="_blank">{{ slide.linkText }}</a>
+                        </h6>
+                        <h6 *ngIf="!slide.link" [ngClass]="[slide.fadeinupdown]" style="color:white; opacity: 0; visibility: hidden; animation-delay: 0.3s;">
+                            {{ slide.linkText }}
+                        </h6>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+  
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden fa fa-angle-left">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <section class="features-area section-padding-70">
+    <div class="container">
+      <div class="section-heading">
+        <div class="line"></div>
+        <h2>Why Choose Us?</h2>
+      </div>
+      <div class="row align-items-end">
+        <!-- Feature 1 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-features-area mb-50 wow fadeInUp" data-wow-delay="300ms">
+            <a href="#">
+              <img src="img/whychoosus/Why-us-01.jpg" alt="">
+              <div class="hover-text">
+                Your money goes directly from your bank a/c to the Mutual Fund. We use bank-grade security to manage your transactions and your personal data is not shared with anyone.
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-features-area mb-50 wow fadeInUp" data-wow-delay="300ms">
+            <a href="#">
+              <img src="img/whychoosus/Why-us-02.jpg" alt="">
+              <div class="hover-text">
+                Yes, It’s completely free with no additional fee, easily track & manage your existing investments, one platform to manage all your family member’s investment account.
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-features-area mb-50 wow fadeInUp" data-wow-delay="500ms">
+            <a href="#">
+              <img src="img/whychoosus/Why-us-03.png" alt="">
+              <div class="hover-text">
+                Dedicated support team and relationship managers to ensure personalised attention focus on generating positive investor experience by serving with quality and speed.
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-features-area mb-50 wow fadeInUp" data-wow-delay="700ms">
+            <a href="#">
+              <img src="img/whychoosus/Why-us-04.png" alt="">
+              <div class="hover-text">
+                Each team member has rich experience in financial services Industry of more than a decade with academic qualifications in Accounting, Financial Management and Financial Planning.
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-area d-flex flex-wrap">
+    <div class="cta-thumbnail bg-img jarallax" style="background-image: url('./img/about_us.png');"></div>
+    <!-- Content -->
+    <div class="contentaboutus">
+      <div class="section-heading white">
+        <div class="line"></div>
+        <h2>About Us</h2>
+      </div>
+      <div class="new1">
+        FINGINE is your Personal Financial Engine to propel you towards your wealth Goals.<br>
+        Fingine helps you invest in the funds appropriate for your risk and reward profile, considering your goals & the time horizon.
+        You are unique and so is your Fingine, efficient and prompt services, investment tracker and professional approach, acts as enabler for investors for taking important decisions.
+        <br>
+      </div>
+      <br>
+      <a href="about" class="btn credit-btn box-shadow btn-2">Read More</a>
+    </div>
+  </section>
+
+  <section class="cta-2-area wow fadeInUp" data-wow-delay="100ms">
+     <div class="container">
+         <div class="row">
+             <div class="col-12">
+                 <div class="cta-content d-flex flex-wrap align-items-center justify-content-between">
+                     <div class="cta-text">
+                         <a href="https://play.google.com/store/apps/details?id=com.fingine.app" class="blink_me" target="_blank">Download The Fingine App Or Invest By Web Click Here</a>
+                     </div>
+                     <div class="cta-btn">
+                         <a href="https://play.google.com/store/apps/details?id=com.fingine.app" target="_blank">
+                             <img id="Image1" src="./img/download.png" height="60" /></a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+
+ <section class="contact-area section-padding-100-0">
+     <div class="container">
+         <div class="row">
+             <div class="col-12 col-lg-7">
+                 <div class="single-contact-area mb-0">
+                     <div class="blog-thumbnail">
+                         <img src="./img/gear.jpg" alt="" style="height: 453px">
+                     </div>
+                 </div>
+             </div>
+
+             <div class="col-12 col-lg-5" >
+                 <div class="single-contact-area mb-0">
+                     <div class="contact-advisor mb-0">
+                         <h3 style="color: white">Fingine Gears</h3>
+                         <div class="single-advisor d-flex align-items-center">
+                             <div class="cta-content">
+                                 <p class="new1">We at FINGINE offers you all investment solutions for a brighter future & lifestyle. We are your one stop destination for various wealth management services.</p>
+                                 <ul>
+                                     <li>
+                                         <img src="./img/arrow.png" alt="" style="height: 15px; margin-right: 20px"><a href="Mutualfund.cshtml" class="new1">Mutual Fund</a></li>
+                                     <li>
+                                         <img src="./img/arrow.png" alt="" style="height: 15px; margin-right: 20px"><a href="Portfolio Management Services" class="new1">PMS(Portfolio Management Service)</a></li>
+                                     <li>
+                                         <img src="./img/arrow.png" alt="" style="height: 15px; margin-right: 20px"><a href="Life Insurance" class="new1">Insurance</a></li>
+                                     <li>
+                                         <img src="./img/arrow.png" alt="" style="height: 15px; margin-right: 20px"><a href="Home Loans" class="new1">Home loans</a></li>
+                                     <li>
+                                         <img src="./img/arrow.png" alt="" style="height: 15px; margin-right: 20px"><a href="Fixed Deposits" class="new1">Fixed Deposits & Bonds</a></li>
+                                     <li>
+                                         <img src="./img/arrow.png" alt="" style="height: 15px; margin-right: 20px"><a href="Structured_Products" class="new1">Structured Products</a></li>
+                                 </ul>
+                                 <br>
+                                 <br>
+                                 <br>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             </div>
+     </div>
+ </section>
+
+  <section class="miscellaneous-area bg-gray section-padding-100-0">
+     <div class="container">
+         <div class="row align-items-end justify-content-center">
+
+             <div class="col-12 col-md-6 col-lg-8">
+                 <div class="contact--area mb-30 wow fadeInUp" data-wow-delay="300ms">
+                     <div class="section-heading mb-30">
+                         <div class="line1" ></div>
+                         <h2>FINGINE Dashboard</h2>
+                     </div>
+                     <p>FINGINE DASHBOARD gives you complete overview of your portfolio and helps you to track your goals and performance. You can effortlessly manage your investments with the user friendly interface to improve returns.</p>
+
+                 </div>
+
+                 <div class="news--area mb-100 wow fadeInUp" data-wow-delay="500ms">
+                     <div class="single-news-area d-flex align-items-center">
+                         <div class="news">
+                             <img src="img/dashboard/Customer Dashboards-01.png" alt="Responsive image" style="width: 80px; height: 80px">
+                         </div>
+                         <div class="news-content">
+                             <h6>Monitor Your Performance</h6>
+
+                         </div>
+                     </div>
+
+                     <div class="single-news-area d-flex align-items-center">
+                         <div class="news">
+                             <img src="img/dashboard/Customer Dashboards-02.png" alt="" style="width: 80px; height: 80px">
+                         </div>
+                         <div class="news-content">
+                             <h6>Manage Your Portfolio</h6>
+                         </div>
+                     </div>
+
+                     <div class="single-news-area d-flex align-items-center">
+                         <div class="news">
+                             <img src="img/dashboard/Customer Dashboards-03.png" alt="" style="width: 80px; height: 80px">
+                         </div>
+                         <div class="news-content">
+                             <h6>Richer Investment Experience</h6>
+                         </div>
+                     </div>
+                     <div class="single-news-area d-flex align-items-center">
+                         <div class="news">
+                             <img src="img/dashboard/Customer Dashboards-04.png" alt="" style="width: 80px; height: 80px">
+                         </div>
+                         <div class="news-content">
+                             <h6>Track & Control All Family Members Investments</h6>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-12 col-md-6 col-lg-4">
+                 <div class="add-area mb-100 wow fadeInUp" data-wow-delay="100ms">
+                     <img src="img/Dashboard.png">
+                 </div>
+             </div>
+
+         </div>
+     </div>
+ </section>
+
+ <section class="team-area mt-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-heading text-center mb-50">
+            <div class="line"></div>
+            <h2>Meet Our Team</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <!-- Team Member 1 -->
+        <div class="col-12 col-md-4">
+          <div class="single-team-member-area mb-50">
+            <div class="team-thumb">
+              <img src="./img/team/Prashant.jpg" alt="">
+              <div class="view-more">
+                <a
+                  href="#"
+                  class="btn btn-secondary"
+                  ngbTooltip="Prashant is an MBA in Insurance & Financial Services and brings his 2 decades of experience from Mutual Funds and banks to help develop a customer centric platform. Having interacted with several small and big investors he understands the basic needs of an investor and works to make the platform customer friendly. Prior to the entrepreneurial journey he has worked with ING, Sundaram AMC in India & overseas markets."
+                  placement="right"
+                >+</a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Prashant Rathi</h5>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Team Member 2 -->
+        <div class="col-12 col-md-4">
+          <div class="single-team-member-area mb-50">
+            <div class="team-thumb">
+              <img src="./img/team/Paresh.jpg" alt="">
+              <div class="view-more">
+                <a
+                  href="#"
+                  class="btn btn-secondary"
+                  ngbTooltip="Paresh is an CA, CFA, MBA who uses his nerdy side of the brain to develop and analyse financial products that can best combine in FINGINE. Having worked in finance industry for 2 decades his job is to ensure your money generates optimal returns. Paresh was an equity analyst with Birla Sunlife AMC, he is working as an Investment Banker for the last 6 years."
+                  placement="right"
+                >+</a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Paresh Khandelwal</h5>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Team Member 3 -->
+        <div class="col-12 col-md-4">
+          <div class="single-team-member-area mb-50">
+            <div class="team-thumb">
+              <img src="./img/team/swati.jpg" alt="">
+              <div class="view-more">
+                <a
+                  href="#"
+                  class="btn btn-secondary"
+                  ngbTooltip="Swati is a B.E. with over 8 years of experience in Retail industry. She is a blend of professional & creative thinking for technical and analytical work while being resourceful, innovative, flexible & transparent ensuring to giveaway a personalized assistance and confidence to the clients. Prior to starting her journey with Fingine, she has worked with Arvind Ltd., Aditya Birla Fashion & Retail, Bestseller India."
+                  placement="right"
+                >+</a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Swati Chandak</h5>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Team Member 4 -->
+        <div class="col-12 col-md-4">
+          <div class="single-team-member-area mb-50">
+            <div class="team-thumb">
+              <img src="./img/team/anand.jpg" alt="">
+              <div class="view-more">
+                <a
+                  href="#"
+                  class="btn btn-secondary"
+                  ngbTooltip="Anand Chandak is an MBA (Finance) based out of Chennai, and comes with a widespread experience in wealth and capital management. He has worked with several stock broking and securities firms handling their HNI clients."
+                  placement="right"
+                >+</a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Anand Chandak</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- <section class="team-area mt-50">
+     <div class="container">
+         <div class="row">
+             <div class="col-12">
+                 <div class="section-heading text-center mb-50">
+                     <div class="line1"></div>
+                     <h2>Meet Our Team</h2>
+                 </div>
+             </div>
+         </div>
+
+         <div class="row">
+             <div class="col-12 col-md-4">
+                 <div class="single-team-member-area mb-50">
+                     <div class="team-thumb">
+                         <img src="img/team/Prashant.jpg" alt="">
+                         <div class="view-more">
+                             <a href="#" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Prashant is an MBA in Insurance & Financial Services and brings his 2 decades of experience from Mutual Funds and banks to help develop a customer centric platform. Having interacted with several small and big investors he understands the basic needs of an investor and works to make the platform customer friendly. Prior to the entrepreneurial journey he has worked with ING, Sundaram AMC in India & overseas markets.">+
+                             </a>
+                         </div>
+                     </div>
+                     <div class="team-info">
+                         <h5>Prashant Rathi</h5>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-12 col-md-4">
+                 <div class="single-team-member-area mb-50">
+                     <div class="team-thumb">
+                         <img src="img/team/Paresh.jpg" alt="">
+                         <div class="view-more">
+                             <a href="#" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Paresh is an CA, CFA, MBA who uses his nerdy side of the brain to develop and analyse financial products that can best combine in FINGINE. Having worked in finance industry for 2 decades his job is to ensure your money generates optimal returns. Paresh was an equity analyst with Birla Sunlife AMC, he is working as an Investment Banker for the last 6 years.">+
+                             </a>
+                         </div>
+                     </div>
+                     <div class="team-info">
+                         <h5>Paresh Khandelwal</h5>
+                     </div>
+                 </div>
+
+             </div>
+             <div class="col-12 col-md-4">
+                 <div class="single-team-member-area mb-50">
+                     <div class="team-thumb">
+                         <img src="img/team/swati.jpg" alt="">
+                         <div class="view-more">
+                             <a href="#" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Swati is a B.E. with over 8 years of experience in Retail industry. She is a blend of professional & creative thinking for technical and analytical work while being resourceful, innovative, flexible & transparent ensuring to giveaway a personalized assistance and confidence to the clients. Prior to starting her journey with Fingine, she has worked with Arvind Ltd., Aditya Birla Fashion & Retail, Bestseller India.">+
+                             </a>
+                         </div>
+                     </div>
+                     <div class="team-info">
+                         <h5>Swati Chandak</h5>
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+         <div class="col-12 col-md-4">
+                  <div class="single-team-member-area mb-50">
+                      <div class="team-thumb">
+                          <img src="img/team/anand.jpg" alt="">
+                          <div class="view-more">
+                              <a href="#" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Anand Chandak is an MBA (Finance) based out of Chennai, and comes with a widespread experience in wealth and capital management. He has worked with several stock broking and securities firms handling their HNI clients.">+
+                              </a>
+                          </div>
+                      </div>
+                      <div class="team-info">
+                          <h5>Anand Chandak </h5>
+                      </div>
+                  </div>
+
+              <div class="col-12 col-md-4">
+              </div>
+          </div>
+
+
+     </div>
+
+ </section> -->
+ <section class="newsletter-area section-padding-100 bg-img jarallax" style="background-image: url(img/bg-img/6.jpg);">
+     <div class="container">
+         <div class="row justify-content-center">
+             <div class="col-12 col-sm-10 col-lg-8">
+                 <div class="nl-content text-center">
+                     <h2>FINGINE Is Your Personal Financial Engine.<br>
+                         Get Your Free Account Now!</h2>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+
+

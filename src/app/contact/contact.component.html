@@ -1,0 +1,146 @@
+<section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('./img/bg-img/13.jpg');">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>Contact</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-heading text-center mt-50 wow fadeInUp" data-wow-delay="100ms">
+    <div class="line"></div>
+    <h2>Get in touch</h2>
+</div>
+
+<section class="cta-area d-flex flex-wrap">
+    <div class="cta-content">
+        <div class="single-widget-area cata-widget">
+            <div class="single-contact-area">
+                <div class="contact--area contact-page">
+                    <div class="contact-content">
+                        <div class="single-contact-content d-flex align-items-center">
+                            <div class="icon">
+                                <img src="./img/core-img/location.png" alt="">
+                            </div>
+                            <div class="text">
+                                <p>216, Swastik Plaza, 2nd floor,Pokhran Road no 2,
+                                    <br>
+                                    Near Voltas, Subhash Nagar,Thane West - 400601</p>
+                            </div>
+                        </div>
+                        <div class="single-contact-content d-flex align-items-center">
+                            <div class="icon">
+                                <img src="./img/core-img/call.png" alt="">
+                            </div>
+                            <div class="text">
+                                <p>022 47515673</p>
+                            </div>
+                        </div>
+                        <div class="single-contact-content d-flex align-items-center">
+                            <div class="icon">
+                                <img src="./img/core-img/message2.png" alt="">
+                            </div>
+                            <div class="text">
+                                <p>{{'support@fingine.in'}}</p>
+                                <span>we reply in 24 hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cta-thumbnail bg-img jarallax" style="background-image: url('./img/bg-img/19.jpg');"></div>
+</section>
+
+<section class="cta-2-area wow fadeInUp" data-wow-delay="100ms">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="cta-content d-flex flex-wrap align-items-center justify-content-between">
+                    <div class="cta-text">
+                        <a href="https://play.google.com/store/apps/details?id=com.fingine.app" class="blink_me" target="_blank">Download The Fingine App Or Invest By Web Click Here</a>
+                    </div>
+                    <div class="cta-btn">
+                        <a href="https://play.google.com/store/apps/details?id=com.fingine.app" target="_blank">
+                            <img src="./img/download.png" height="60" alt="Download App">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="map-area">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.2718696264665!2d72.96831961414152!3d19.226979687001496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b95e0fe3c3ff%3A0x9223125de7e0a42a!2sEmerald%20Plaza%2C%20Manpada%2C%20Thane%20West%2C%20Thane%2C%20Maharashtra%20400607!5e0!3m2!1sen!2sin!4v1616742602036!5m2!1sen!2sin" allowfullscreen></iframe>
+    <div class="contact---area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="contact-form-area contact-page">
+                        <h4 class="mb-50">Send a message</h4>
+
+                        <form (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required [(ngModel)]="contactForm.name" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Your E-mail" required [(ngModel)]="contactForm.email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" id="mobno" placeholder="Your mobile No" pattern="[789][0-9]{9}" required [(ngModel)]="contactForm.mobileNo" name="mobileNo">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <select class="form-control" id="subject" [(ngModel)]="contactForm.subject" name="subject">
+                                            <option *ngFor="let subject of subjects" [value]="subject">{{subject}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" cols="30" rows="10" placeholder="Your Message" [(ngModel)]="contactForm.message" name="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn credit-btn mt-30" type="submit">Send</button><br>
+                                    <label *ngIf="messageSent" style="color: green">{{messageSent}}</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="newsletter-area section-padding-100 bg-img jarallax" style="background-image: url('./img/bg-img/6.jpg');">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-lg-8">
+                <div class="nl-content text-center">
+                    <h2>FINGINE Is Your Personal Financial Engine. Get Your Free Account Now!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

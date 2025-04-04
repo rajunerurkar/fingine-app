@@ -1,0 +1,47 @@
+<section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('./img/bg-img/13.jpg');">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>Services</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Services</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Fixed Deposits</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container section-padding-100-0">
+    <div class="section-heading">
+        <div class="line"></div>
+        <h2>Fixed Deposits</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>Simple investment product which offers safety, liquidity and flexibility, we help you with wide options of fixed deposits allowing you to gain better returns</p>
+            <p>
+                Additional 0.10% p.a. interest if you book an FD online<br />
+                100% online process<br />
+                Quickest way to book an FD<br />
+                Earn more with our Fixed Deposit, Book your FD now, 
+                <a href="#" (click)="openExternalLink()">Click here</a>
+            </p>
+            <button (click)="signup()" 
+                    accesskey="s" 
+                    class="btn credit-btn box-shadow btn-2 signups">
+              Contact Us
+            </button>
+        </div>
+        <div class="col-sm-6">
+            <img src="./img/subpages/fixed-deposits.jpg" 
+                 style="width: 100%; height: 300px" 
+                 alt="Fixed Deposit Services">
+        </div>
+    </div>
+</div>
