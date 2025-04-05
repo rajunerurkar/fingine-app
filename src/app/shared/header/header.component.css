@@ -57,7 +57,9 @@
   }
   a:hover{
     color:white;
-
+  }
+  .dropdown a:hover{
+    color:#ffbb38;
   }
   /* Adjust for mobile view */
   @media (max-width: 991.98px) {
