@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { ContactModalComponent } from '../../shared/contact-modal/contact-modal.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-fixed-deposits',
-  imports: [ContactModalComponent],
+  imports: [CommonModule, RouterModule,ContactModalComponent],
   templateUrl: './fixed-deposits.component.html',
   styleUrl: './fixed-deposits.component.css'
 })
