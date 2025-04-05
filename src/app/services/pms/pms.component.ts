@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
+import { ContactModalComponent } from '../../shared/contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-pms',
-  imports: [],
+  imports: [ContactModalComponent],
   templateUrl: './pms.component.html',
   styleUrl: './pms.component.css'
 })
 export class PmsComponent {
+  showModal = false;
+
   signup() {
-    // Implement your signup logic here
-    console.log('Signup clicked');
-    // You might want to open a modal or navigate to a contact page
+    this.showModal = true;
+  }
+  closeModal() {
+    this.showModal = false;
   }
 }

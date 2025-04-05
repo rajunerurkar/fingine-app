@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
+import { ContactModalComponent } from '../../shared/contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-insurance',
-  imports: [],
+  imports: [ContactModalComponent],
   templateUrl: './insurance.component.html',
   styleUrl: './insurance.component.css'
 })
 export class InsuranceComponent {
+  showModal = false;
+
   signup() {
-    // Implement your signup logic here
-    console.log('Signup clicked');
-    // You might want to open a modal or navigate to a contact page
+    this.showModal = true;
+  }
+  closeModal() {
+    this.showModal = false;
   }
 }

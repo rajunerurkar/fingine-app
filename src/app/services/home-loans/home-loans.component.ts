@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
+import { ContactModalComponent } from '../../shared/contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-home-loans',
-  imports: [],
+  imports: [ContactModalComponent],
   templateUrl: './home-loans.component.html',
   styleUrl: './home-loans.component.css'
 })
 export class HomeLoansComponent {
+  showModal = false;
+
   signup() {
-    // Implement your signup logic here
-    console.log('Signup clicked');
-    // You might want to open a modal or navigate to a contact page
+    this.showModal = true;
+  }
+  closeModal() {
+    this.showModal = false;
   }
 }
