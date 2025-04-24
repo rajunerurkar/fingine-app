@@ -45,78 +45,18 @@
             </div>
           </div>
         </div>
- 
-
-    <!-- <div class="credit-main-menu" id="sticker">
-      <div class="classy-nav-container breakpoint-off">
-          <div class="container">
-              <nav class="classy-navbar justify-content-between" id="creditNav">
-
-                  <div class="classy-navbar-toggler">
-                      <span class="navbarToggler"><span></span><span></span><span></span></span>
-                  </div>
-
-                  <div class="classy-menu">
-
-                      <div class="classycloseIcon">
-                          <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                      </div>
-
-                      <div class="classynav">
-                          <ul>
-                              <li><a href="/">Home</a></li>
-                              <li>
-                                  <a href="#">Services</a>
-                                  <ul class="dropdown" style="width: 250px">
-                                      <li><a href="/Services/Mutualfund">Mutual Funds</a></li>
-                                      <li><a href="/Services/PortfolioManagementServices">Portfolio Management</a></li>
-                                      <li><a href="/Services/LifeInsurance">Insurance</a></li>
-                                      <li><a href="/Services/HomeLoans">Home Loans</a></li>
-                                      <li><a href="/Services/FixedDeposits">Fixed Deposits</a></li>
-                                      <li><a href="/Services/Structured_Products">Structured Products</a></li>
-                                  </ul>
-                              </li>
-                              <li>
-                                  <a href="#">learning</a>
-                                  <ul class="dropdown" style="width: 250px">
-                                      <li><a href="/Home/ContactUs">Blogs</a></li>  
-                                      <li><a href="/Home/ContactUs">Videos</a></li>
-                                       <li><a href="/Learning/Mutual_Fund_Glossary">Mutual Fund Glossary</a></li>
-                                      <li><a href="/Learning/InsuranceGlossary">Insurance Glossary</a></li>
-                                  </ul>
-                              </li>
-
-                              <li><a href="/Home/Faqs">FAQs</a></li>
-                              <li><a href="/Home/about">About Us</a></li>
-                              <li><a href="/Home/ContactUs">Contact</a></li>
-                              <li><a href="https://mf.fingine.in/finginelogin.jsp" target="_blank">Login</a></li>
-                          </ul>
-                      </div>
-                  </div>
-
-                  <div class="contact">
-                      <a href="#">
-                          <img src="./img/core-img/call2.png" alt="">
-                          022 47515673
-                      </a>
-                  </div>
-              </nav>
-          </div>
-      </div>
-</div>    -->
-
 </div>
 </div>  
 </header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container-fluid">
  
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <button #navbarToggler class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav" style="margin-left: 75px;">
+    <div #navbarNav class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav navbarleft">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -126,8 +66,8 @@
             Services
           </a>
           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-            <li><a class="dropdown-item" routerLink="/services/mutual-fund" (click)="navigateToMutualFund()" routerLinkActive="active">Mutual Fund</a> </li>
-            <li><a class="dropdown-item" (click)="navigateTo('/services/pms')">Portfolio Management</a></li>
+            <li><a class="dropdown-item" (click)="navigateTo('/services/mutual-fund')" routerLinkActive="active">Mutual Fund</a> </li>
+            <li><a class="dropdown-item" (click)="navigateTo('/services/pms#1')">Portfolio Management</a></li>
             <li><a class="dropdown-item" (click)="navigateTo('/services/insurance')">Insurance</a></li>
             <li><a class="dropdown-item" (click)="navigateTo('/services/home-loans')">Home Loans</a></li>
             <li><a class="dropdown-item" (click)="navigateTo('/services/fixed-deposits')">Fixed Deposits</a></li>
@@ -147,7 +87,7 @@
         
           </ul>
         </li>
-        <li class="nav-item">
+        <li class="nav-item " >
           <a class="nav-link" (click)="navigateTo('/faq')">FAQs</a>
         </li>
         <li class="nav-item">
@@ -156,13 +96,14 @@
         <li class="nav-item">
           <a class="nav-link" (click)="navigateTo('/contact')">Contact</a>
         </li>
+        <li class="nav-item"><a class="nav-link" (click)="navigateTo('/newsletter')" rel="noopener noreferrer">Newsletter</a></li>
         <li class="nav-item">
           <a class="nav-link" href="https://mf.fingine.in/finginelogin.jsp" target="_blank">Login</a>
         </li>
       </ul>
     </div>
-    <div class="d-none d-lg-block contact">
-      <a href="#" class="phone-container"> <img src="./img/core-img/call2.png" alt="">&nbsp;&nbsp;<strong>022 47515673</strong></a>
+    <div #contactno  [ngClass]="isNavbarMenuOpen == true ? 'contact' :'my-hidden-div' ">
+      <span class="phone-container"> <img src="./img/core-img/call2.png" alt="">&nbsp;&nbsp;<strong>022 47515673</strong></span>
     </div>
   </div>
 </nav>

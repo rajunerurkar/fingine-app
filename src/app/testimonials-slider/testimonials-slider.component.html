@@ -1,0 +1,31 @@
+<div class="testimonial-section" *ngIf="testimonials.length > 0">
+    <div class="testimonial-slider-container">
+      <div class="testimonial-card" *ngIf="testimonials[currentIndex]">
+        <div class="testimonial-content">
+          <img [src]="testimonials[currentIndex].photoUrl" [alt]="testimonials[currentIndex].name" class="client-photo">
+          <div class="feedback-container">
+            <p class="feedback-text">"{{ testimonials[currentIndex].feedback }}"</p>
+            <div class="client-info">
+              <p class="client-name">{{ testimonials[currentIndex].name }}</p>
+              <p class="client-title" *ngIf="testimonials[currentIndex].title">{{ testimonials[currentIndex].title }}</p>
+              <p class="client-company" *ngIf="testimonials[currentIndex].company">{{ testimonials[currentIndex].company }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="testimonial-card" *ngIf="testimonials.length > 1 && testimonials[getNextIndex(currentIndex)]">
+          <div class="testimonial-content">
+              <img [src]="testimonials[getNextIndex(currentIndex)].photoUrl" [alt]="testimonials[getNextIndex(currentIndex)].name" class="client-photo">
+              <div class="feedback-container">
+                  <p class="feedback-text">"{{ testimonials[getNextIndex(currentIndex)].feedback }}"</p>
+                  <div class="client-info">
+                      <p class="client-name">{{ testimonials[getNextIndex(currentIndex)].name }}</p>
+                      <p class="client-title" *ngIf="testimonials[getNextIndex(currentIndex)].title">{{ testimonials[getNextIndex(currentIndex)].title }}</p>
+                      <p class="client-company" *ngIf="testimonials[getNextIndex(currentIndex)].company">{{ testimonials[getNextIndex(currentIndex)].company }}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>

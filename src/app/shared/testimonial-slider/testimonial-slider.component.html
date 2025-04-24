@@ -1,0 +1,62 @@
+    <div class="testimonial-section" *ngIf="testimonials.length > 0">
+      <div class="row">
+        <div class="col-12 ">
+      <div class="text-center">
+      <div class="line" ></div>
+      <h2>What Our Clients Say</h2>
+    </div>
+        </div></div>
+      <div class="testimonial-slider-container" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    
+        <button
+          *ngIf="canSlide()"
+          class="slider-arrow prev-arrow"
+          (click)="manualPrevious()"
+          aria-label="Previous Testimonials">
+          &#10094; 
+        </button>
+    
+        <div class="testimonial-cards-wrapper">
+            <div class="testimonial-card" *ngIf="testimonials[currentIndex]">
+              <div class="testimonial-content">
+                <img [src]="testimonials[currentIndex].photoUrl" [alt]="testimonials[currentIndex].name" class="client-photo">
+                <div class="feedback-container">
+                  <p class="feedback-text">"{{ testimonials[currentIndex].feedback }}"</p>
+                  <div class="client-info">
+                    <p class="client-name">{{ testimonials[currentIndex].name }}</p>
+                    <p class="client-title" *ngIf="testimonials[currentIndex].title">{{ testimonials[currentIndex].title }}</p>
+                    <p class="client-company" *ngIf="testimonials[currentIndex].company">{{ testimonials[currentIndex].company }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="testimonial-card" *ngIf="testimonials.length > 1 && testimonials[getNextIndex(currentIndex)]">
+                <div class="testimonial-content">
+                    <img [src]="testimonials[getNextIndex(currentIndex)].photoUrl" [alt]="testimonials[getNextIndex(currentIndex)].name" class="client-photo">
+                    <div class="feedback-container">
+                        <p class="feedback-text">"{{ testimonials[getNextIndex(currentIndex)].feedback }}"</p>
+                        <div class="client-info">
+                            <p class="client-name">{{ testimonials[getNextIndex(currentIndex)].name }}</p>
+                            <p class="client-title" *ngIf="testimonials[getNextIndex(currentIndex)].title">{{ testimonials[getNextIndex(currentIndex)].title }}</p>
+                            <p class="client-company" *ngIf="testimonials[getNextIndex(currentIndex)].company">{{ testimonials[getNextIndex(currentIndex)].company }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button
+           *ngIf="canSlide()"
+           class="slider-arrow next-arrow"
+           (click)="manualNext()"
+           aria-label="Next Testimonials">
+           &#10095; 
+         </button>
+    
+      </div><div class="slider-dots" *ngIf="canSlide()">
+        <button *ngFor="let page of pagesArray; let i = index" class="dot"
+          [class.active]="isDotActive(i)" (click)="goToPage(i)" [attr.aria-label]="'Go to page ' + (i + 1)">
+        </button>
+      </div>
+    
+    </div>

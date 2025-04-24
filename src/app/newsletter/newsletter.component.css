@@ -1,0 +1,26 @@
+.newsletter-container {
+    /* Provide some basic layout */
+    padding: 15px;
+    max-width: 850px; /* Adjust based on typical newsletter width */
+    margin: 20px auto; /* Center the container */
+    background-color: #fff; /* Optional background */
+  }
+  
+  .newsletter-page img {
+    /* Make images responsive within the container */
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevent extra space below image */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+  }
+  
+  .page-separator {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0; /* Light separator line */
+    margin: 25px 0; /* Space above and below separator */
+  }
+
+  

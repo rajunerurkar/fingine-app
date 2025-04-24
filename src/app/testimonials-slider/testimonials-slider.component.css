@@ -1,0 +1,95 @@
+/* Styles specific to the slider section, if not handled by parent page */
+.testimonial-section {
+    /* Example: remove padding if parent handles it */
+    /* padding: 40px 20px; */
+  }
+  
+  .testimonial-slider-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between testimonial cards */
+    /* max-width: 1200px; */ /* Max width might be set by parent */
+    /* margin: 0 auto; */ /* Centering might be set by parent */
+    position: relative;
+  }
+  
+  .testimonial-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    width: calc(50% - 15px); /* Adjust if gap changes */
+    box-sizing: border-box;
+    text-align: left;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .testimonial-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .client-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  
+  .feedback-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  .client-info {
+    margin-top: auto;
+    padding-top: 10px;
+    text-align: right;
+  }
+  
+  .client-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #222;
+    margin: 0 0 2px 0;
+  }
+  
+  .client-title,
+  .client-company {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+    line-height: 1.3;
+  }
+  
+  /* Basic Responsive */
+  @media (max-width: 768px) {
+    .testimonial-card {
+      width: 100%; /* Stack cards */
+    }
+     .client-info {
+       text-align: left;
+     }
+     .testimonial-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+     }
+     .client-photo {
+        margin-bottom: 15px;
+        margin-top: 0;
+     }
+  }

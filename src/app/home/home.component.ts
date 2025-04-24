@@ -4,10 +4,11 @@ import { jarallax } from 'jarallax';
 import { CommonModule } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Testimonial, TestimonialSliderComponent } from '../shared/testimonial-slider/testimonial-slider.component';
 @Component({
   selector: 'app-home',
   standalone:true,
-  imports: [CommonModule, SlickCarouselModule,NgbModule],
+  imports: [CommonModule, SlickCarouselModule,NgbModule,TestimonialSliderComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -37,7 +38,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {
     // Any initialization logic can go here
   }
-
+  nfoList: NfoInfo[] = [
+   
+    { name: 'Axis Nifty500 Momentum 50 IndexFund', startDate: '2025-01-24', endDate: '2025-02-07' },
+    { name: 'Groww Nifty 500 Momentum 50 ETF FOF', startDate: '2025-04-03', endDate: '2025-04-17' },
+    { name: 'Kotak Energy Opportunities Fund', startDate: '2025-04-03', endDate: '2025-04-17' },
+    { name: 'SBI Global Saver NFO', startDate: '2025-05-10', endDate: '2025-05-24' },
+    { name: 'SBI Dividend Yield Fund', startDate: '2025-05-12', endDate: '2025-05-26' },
+    
+  ];
   ngAfterViewInit(): void {
     this.initializeCarousel();
     this.initializeJarallax();
@@ -74,6 +83,20 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   slides = [
+    // {
+    //   fadeinupdown:'fadeInDown',
+    //   image: './img/hero/hero-0.jpeg', // Path to your image
+    //   title: '',
+    //   titleCSS : 'title1Css',
+    //   subtitle1: '',
+    //   subtitle1css:'subtitle1css', 
+    //   subtitle2: '',
+    //   subtitle2css:'', 
+    //   subtitle3: '',
+    //   subtitle3css:'', 
+    //   link: 'https://mf.fingine.in/finginelogin.jsp',
+    //   linkText: '',
+    // },
     {
       fadeinupdown:'fadeInDown',
       image: './img/hero/hero-1.png', // Path to your image
@@ -135,4 +158,57 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       linkText: 'WORRY FREE FOR THEM',
     },
   ];
+
+  testimonialData: Testimonial[] = [
+    // --- Populate this with REAL data from Fingine Team ---
+    {
+      name: 'Anilkumar Dayma',
+      photoUrl: './img/Testimonial/AnilDayma.jpg', // Put images in assets folder
+      feedback: 'I was unsure about my retirement plans, but Fingine provided me with a clear roadmap. Their guidance has helped me maximize my savings and investments, ensuring I can retire comfortably. I truly appreciate their patience and expertise!',
+      title: 'DGM - Buying and Merchandising',
+      company: 'Baazar Retail Pvt Ltd'
+    },
+    {
+      name: 'Prakash Patel',
+      photoUrl: './img/Testimonial/PrakashPatel.jpg',
+      feedback: 'I trust fingine completely for helping me achieve my financial goals. They are always transparent, proactive, and dedicated to my financial success. It’s reassuring to have someone so knowledgeable managing my overall portfolio.',
+      title: 'Director',
+      company: 'Maruti Arts'
+    },
+     {
+      name: 'Smita Deshpande',
+      photoUrl: './img/Testimonial/SmitaDeshpande.jpg',
+      feedback: 'Thanks to Fingine, my investments are not only performing well but are also aligned with my long-term goals. They have a keen eye for risk management and always provide insightful recommendations. I highly recommend their services to anyone looking to grow their wealth!',
+      title: 'VP',
+      company: 'Alok industries'
+    },
+    {
+      name: 'Pratik Porwal',
+      photoUrl: './img/Testimonial/PratikPorwal.jpg',
+      feedback: 'What sets Fingine apart is their personalized approach. They took the time to understand my financial situation, goals, and risk tolerance before crafting a customized strategy. Their expertise has brought me peace of mind and comfort.',
+      title: 'Founder',
+      company: 'APJ ClothingCare'
+    },
+    
+  
+    {
+      name: ' Jasjiv Singh',
+      photoUrl: './img/Testimonial/JasjivAnand.jpeg',
+      feedback: 'I began my financial planning journey with Fingine in 2017 after disappointing experiences with bank-advised investments. Their disciplined approach to entering financial markets through mutual funds transformed my portfolio, steadily growing my holdings with strategic risk management, even lowering my income tax outflows. Quietly and consistently, Team Fingine has navigated me through market fluctuations, always staying a step ahead. I highly recommend Fingine for anyone seeking reliable and insightful financial guidance.',
+      title: 'Marketing Director',
+      company: 'Disney Star'
+    }
+  ];
+
+  // {
+  //   name: 'Dr. Pallavi Rathi',
+  //   photoUrl: '/assets/images/alice.jpg',
+  //   feedback: 'As someone with a complex financial portfolio, I needed a team who could provide expert insights, strategic asset allocation, and proactive risk management for my entire family portfolios. Fingine has exceeded my expectations in every way. Their ability to navigate market volatility while optimizing my investments has been truly impressive. I appreciate their deep understanding of wealth preservation and growth strategies, as well as their unwavering commitment to my financial success. With their guidance, I have full confidence in my financial future.',
+
+  // },
+}
+interface NfoInfo {
+  name: string;
+  startDate: string; 
+  endDate: string;
 }

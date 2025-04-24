@@ -1,64 +1,4 @@
- <!-- <footer class="footer-area section-padding-100-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-footer-widget mb-50">
-            <h5 class="widget-title">About Us</h5>
-            <ul>
-              <li><a routerLink="/">Home</a></li>
-              <li><a routerLink="/services">Services</a></li>
-              <li><a routerLink="/faqs">FAQs</a></li>
-              <li><a routerLink="/about">About</a></li>
-              <li><a routerLink="/contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-  
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-footer-widget mb-50">
-            <h5 class="widget-title">Our Services</h5>
-            <ul>
-              <li><a routerLink="/services/mutualfund">Mutual Funds</a></li>
-              <li><a routerLink="/services/portfolio">Portfolio Management</a></li>
-              <li><a routerLink="/services/insurance">Insurance</a></li>
-              <li><a routerLink="/services/home-loans">Home Loans</a></li>
-            </ul>
-          </div>
-        </div>
-  
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-footer-widget mb-50">
-            <h5 class="widget-title">How It Works</h5>
-            <ul>
-              <li><a href="#">Call Us</a></li>
-              <li><a href="#">Invest</a></li>
-              <li><a href="#">Relax</a></li>
-            </ul>
-          </div>
-        </div>
-  
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-footer-widget mb-50">
-            <h5 class="widget-title">Contact Us</h5>
-            <p>216, Swastik Plaza, 2nd floor, Pokhran Road no 2, Near Voltas, Thane West - 400601</p>
-            <p>Phone: 022 47515673</p>
-            <p>Email: <a href="mailto:support@fingine.in"><span>{{ 'support@fingine.in' }}</span></a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="copywrite-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p class="copywrite-text">&copy; {{ currentYear }} Fingine Financial Service LLP</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>  -->
-  <section class="features-area section-padding-70">
+   <section class="features-area section-padding-70">
     <div class="container">
         <div class="row align-items-end">
             <div class="col-12">
@@ -100,11 +40,11 @@
       <div class="row">
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="single-footer-widget mb-50">
-            <h5 class="widget-title">About Us</h5>
+            <h5 class="widget-title" (click)="navigateTo('/about')">About Us</h5>
             <nav>
               <ul>
-                <li><a routerLink="/">Home</a></li>
-                <li><a routerLink="/services/mutualfund">Services</a></li>
+                <li><a (click)="navigateTo('/home')">Home</a></li>
+                <li><a (click)="navigateTo('/services/mutual-fund')">Services</a></li>
                 <li><a (click)="navigateTo('/faq')">FAQs</a></li>
                 <li><a (click)="navigateTo('/about')">About</a></li>
                 <li><a (click)="navigateTo('/contact')">Contact</a></li>
@@ -118,7 +58,7 @@
             <h5 class="widget-title">Our Services</h5>
             <nav>
               <ul>
-                <li><a (click)="navigateToMutualFund()">Mutual Funds</a></li>
+                <li><a (click)="navigateTo('/services/mutual-fund')">Mutual Funds</a></li>
                 <li><a (click)="navigateTo('/services/pms')">Portfolio Management</a></li>
                 <li><a (click)="navigateTo('/services/insurance')">Insurance</a></li>
                 <li><a (click)="navigateTo('/services/home-loans')">Home Loans</a></li>

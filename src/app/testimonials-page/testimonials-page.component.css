@@ -1,0 +1,24 @@
+/* src/app/testimonials-page/testimonials-page.component.css */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 30px auto; /* Add top/bottom margin */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 15px;
+  }
+  
+  p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  hr {
+    margin-bottom: 40px;
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+  }

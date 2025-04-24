@@ -13,10 +13,16 @@ export class FooterComponent {
    navigateToMutualFund(){
      this.router.navigate(['/services/mutual-fund']);
    }
-   navigateTo(path: string) {
-     this.router.navigate([path]);
-   }
- 
+   
+   navigateTo(urlWithFragment: string): void {
+    // Separate base url and fragment
+    const [url, fragment] = urlWithFragment.split('#');
+    if (fragment) {
+      this.router.navigate([url], { fragment: fragment });
+    } else {
+      this.router.navigate([url]); // Or navigateByUrl
+    }
+  }
  
   currentYear: number = new Date().getFullYear();
 

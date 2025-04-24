@@ -11,6 +11,8 @@ import { MutualFundGlossaryComponent } from './learning/mutual-fund-glossary/mut
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { TestimonialsPageComponent } from './testimonials-page/testimonials-page.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -49,5 +51,7 @@ export const routes: Routes = [
         path: 'contact', 
         component: ContactComponent,
         title: 'Contact Us' 
-      }
+      },
+      { path: 'newsletter', component: NewsletterComponent },
+      { path: 'testimonials', component: TestimonialsPageComponent },
 ];

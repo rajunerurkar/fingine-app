@@ -1,0 +1,257 @@
+.testimonial-section {
+    padding: 40px 20px; /* Add padding around the section */
+    background-color: #f9f9f9; /* Light background for the section */
+    text-align: center;
+  }
+  
+  .section-title {
+    margin-bottom: 30px;
+    font-size: 2rem; /* Adjust size */
+    font-weight: 600;
+    color: #333; /* Adjust color */
+  }
+  
+  .testimonial-slider-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+    justify-content: center; /* Center testimonials */
+    gap: 30px; /* Space between testimonial cards */
+    max-width: 1200px; /* Max width of the container */
+    margin: 0 auto; /* Center the container */
+    /* overflow: hidden; */ /* Needed for more complex sliding animations */
+    position: relative;
+  }
+  
+  .testimonial-card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    padding: 25px;
+    width: calc(50% - 15px); /* Each card takes roughly half width, accounting for gap */
+    box-sizing: border-box;
+    text-align: left;
+    /* Basic transition for smoother appearance changes if needed */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .testimonial-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between photo and text content */
+  }
+  
+  .client-photo {
+    width: 70px; /* Adjust photo size */
+    height: 70px;
+    border-radius: 50%; /* Circular photo */
+    object-fit: cover; /* Ensure image covers the area well */
+    margin-top: 5px; /* Align slightly below top of text */
+    flex-shrink: 0; /* Prevent photo from shrinking */
+  }
+  
+  .feedback-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback-text {
+    font-size: 0.95rem; /* Adjust font size */
+    color: #555; /* Text color */
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  .client-info {
+    margin-top: auto; /* Push client info to the bottom */
+    padding-top: 10px; /* Space above client info */
+    text-align: right; /* Align client info to the right like sample */
+  }
+  
+  .client-name {
+    font-weight: 600;
+    font-size: 1rem; /* Adjust font size */
+    color: #222;
+    margin: 0 0 2px 0;
+  }
+  
+  .client-title,
+  .client-company {
+    font-size: 0.85rem; /* Smaller font size */
+    color: #777; /* Lighter color */
+    margin: 0;
+    line-height: 1.3;
+  }
+  
+  /* Basic Responsive */
+  @media (max-width: 768px) {
+    .testimonial-card {
+      width: 100%; /* Stack cards on smaller screens */
+    }
+     .client-info {
+       text-align: left; /* Align left on mobile */
+     }
+     .testimonial-content {
+        flex-direction: column; /* Stack photo above text */
+        align-items: center; /* Center items */
+        text-align: center; /* Center text */
+     }
+     .client-photo {
+        margin-bottom: 15px;
+        margin-top: 0;
+     }
+  }
+  
+ /* new code  */
+/* === Previous CSS === */
+.testimonial-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  position: relative; /* Needed for positioning arrows */
+}
+
+.section-title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.testimonial-slider-container {
+  position: relative; /* Needed for positioning arrows within */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px; /* Add padding to make space for arrows inside */
+  box-sizing: border-box;
+}
+
+.testimonial-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Or no-wrap if using CSS slide animation */
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  width: calc(50% - 15px); /* Adjust if gap changes */
+  box-sizing: border-box;
+  text-align: left;
+  transition: opacity 0.5s ease-in-out; /* Existing transition */
+  flex-shrink: 0; /* Prevent shrinking if flex */
+}
+
+.testimonial-content { /* Keep as is */ }
+.client-photo { /* Keep as is */ }
+.feedback-container { /* Keep as is */ }
+.feedback-text { /* Keep as is */ }
+.client-info { /* Keep as is */ }
+.client-name { /* Keep as is */ }
+.client-title, .client-company { /* Keep as is */ }
+
+/* === New Styles for Arrows === */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px; /* Center arrow vertically */
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-arrow:active {
+   transform: translateY(-50%) scale(0.95);
+}
+
+
+.prev-arrow {
+  left: 5px; /* Position near the edge */
+}
+
+.next-arrow {
+  right: 5px; /* Position near the edge */
+}
+
+/* === New Styles for Dots === */
+.slider-dots {
+  text-align: center;
+  padding: 20px 0 0 0; /* Space above the dots */
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #bbb; /* Inactive dot color */
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #999;
+}
+
+.dot.active {
+  background-color: #fdbb2d; /* Active dot color - match theme */
+}
+
+
+/* Basic Responsive */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 100%; /* Stack cards */
+  }
+  .testimonial-slider-container {
+     padding: 0 15px; /* Adjust padding */
+  }
+  .slider-arrow {
+     width: 35px;
+     height: 35px;
+     line-height: 35px;
+     font-size: 18px;
+  }
+  .prev-arrow { left: 0px; }
+  .next-arrow { right: 0px; }
+   /* Styles for mobile card stacking */
+   .client-info { text-align: left; }
+   .testimonial-content { flex-direction: column; align-items: center; text-align: center;}
+   .client-photo { margin-bottom: 15px; margin-top: 0; }
+}
+.testimonial-section .line {
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #ffbb38;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
